@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="assets/images/logo.png" rel="icon" />
+<title>Guardian Map | MeetLove Dating Complete App, Dashboard And Node.js Backend</title>
+<meta name="description" content="MeetLove - Flutter Dating App (TikTok Style, Chat, Random Live, Partner Booking) + Admin & Backend">
+<meta name="author" content="harnishdesign.net">
+
+<!-- Stylesheet
+============================== -->
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+<!-- Magnific Popup -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+<!-- Highlight Syntax -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End --> 
+
+<!-- Document Wrapper   
+=============================== -->
+<div id="main-wrapper"> 
+  
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top"> 
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+		
+		<!-- Logo --> 
+        <a class="logo ml-md-3" href="index.html" title="Guardian Map"> <img src="assets/images/logo.png" height="50" width="50" alt="Guardian Map"/> </a> 
+		<span class="text-2 ml-2">Guardian Map</span> 
+        <!-- Logo End -->
+        
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+        
+		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li><a target="_blank" href="">Other Template</a></li>
+            <li><a target="_blank" href="https://wa.link/xnw98v">Support</a></li>
+          </ul>
+        </div>
+        <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="https://wa.link/xnw98v" target="_blank" title="" data-original-title="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+          <li class="social-icons-facebook"><a data-toggle="tooltip" href="https://join.skype.com/invite/tVC9Tr1JdPwK" target="_blank" title="" data-original-title="Skype"><i class="fab fa-skype"></i></a></li>
+          <li class="social-icons-dribbble"><a data-toggle="tooltip" href="https://www.linkedin.com/in/srabonray-dev/" target="_blank" title="" data-original-title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End --> 
+  </header>
+  <!-- Header End --> 
+  
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+    
+	<!-- Sidebar Navigation
+	============================ -->
+	<div class="idocs-navigation bg-light">
+      <ul class="nav flex-column ">
+        <li class="nav-item"><a class="nav-link active" href="#idocs_start">Getting Started</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#idocs_installation">Introduction</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_project">Project</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_accountSetup">Account Setup</a></li>
+            <ul>
+              <li class="nav-item"><a class="nav-link" href="#idocs_html_firebase">Firebase</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_html_stripe">Stripe</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_html_google_map">Google Map</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_html_github">Stripe</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_html_mongodb">MongoDB Atlas</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_html_railway">Railway Server</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_html_cloudnary">Cloudinary</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_html_app_upload">App Upload</a></li>
+            </ul>
+            <!-- <li class="nav-item"><a class="nav-link" href="#idocs_sass">Installation</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="#idocs_html_structure">Change App Logo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_color_schemes">Change App Name</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_theme_customization">Change App Package</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#idocs_logo_settings">Setup Firebase</a></li> -->
+            <!-- <li class="nav-item"><a class="nav-link" href="#setup_admob_settings">Setup Admob</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="#build_apk_aab">App build & release</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#idocs_support">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="#common_issues">Common Issue</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why_hire_me">Why Hire Me</a></li>
+		<li class="nav-item"><a class="nav-link" href="#idocs_templates">More Templates</a></li>
+		<li class="nav-item"><a class="nav-link" href="#idocs_changelog">Changelog</a>
+			<ul class="nav flex-column">
+            <!-- <li class="nav-item"><a class="nav-link" href="#v1-1">v1.1</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0</a></li>
+          </ul>
+		</li>
+      </ul>
+    </div>
+    
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container"> 
+        
+        <!-- Getting Started
+		============================ -->
+        <section id="idocs_start">
+        <h1>MeetLove Documentation</h1>
+        <h4>MeetLove - Flutter Dating App (TikTok Style, Chat, Random Live, Partner Booking) + Admin & Backend</h4>
+        <p class="lead">Thank you so much for purchasing our item from Codecanyon.</p>
+		<hr>
+		<div class="row">
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong>Version:</strong> 1.0</li>
+					<li><strong>Author:</strong> <a href="https://wa.link/xnw98v" target="_blank">Srabon Dev</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong class="font-weight-700">Created:</strong> 5 May, 2025</li>
+					<li><strong>Update:</strong> 5 May, 2025</li>
+				</ul>
+			</div>
+		</div>
+        <p class="alert alert-info">If you have any questions that are beyond the scope of this help file, Please feel free to contact <a target="_blank" href="https://wa.link/xnw98v">Item Support WhatsApp</a>.</p>
+        </section>
+        
+        <hr class="divider">
+        
+        <section id="idocs_installation">
+          <h2>Introduction</h2>
+          <p class="lead">Thank you for your interest in MeetLove!</p>
+          <p>MeetLove is a complete Modern Dating Platform built with the Flutter Framework, designed for Android and iOS devices, along with a powerful Web Admin Dashboard and a secure Node.js backend.</p>
+          <p>Using Google's open-source Flutter technology, MeetLove offers a high-performance, cross-platform experience with real-time chat, TikTok-style video feed, random live streaming, partner booking system, secure Stripe payments, and more — all crafted to deliver the ultimate modern dating experience.</p>
+        
+          <p><strong>Requirements</strong></p>
+          <ol>
+            <li><strong>Android Studio / VS Code Editor</strong> - You will need either Android Studio or Visual Studio Code to open, edit, and run the project.</li>
+            <li><strong>Firebase Account</strong> - Firebase is not used <a href="https://firebase.google.com/" target="_blank">Firebase Console</a>.</li>
+            <!-- <li><strong>Firebase Account</strong> - Firebase is used for authentication and real-time messaging. Create an account on <a href="https://firebase.google.com/" target="_blank">Firebase Console</a>.</li> -->
+            <li><strong>Download Flutter SDK: v3.16.5 or later</strong>
+              <p>You need to download and set up Flutter from <a href="https://flutter.dev" target="_blank">flutter.dev</a>. Follow the setup instructions for your device:</p>
+              <p><strong>Windows:</strong> <a href="https://docs.flutter.dev/get-started/install/windows" target="_blank">Flutter Windows Setup</a></p>
+              <p><strong>Mac:</strong> <a href="https://docs.flutter.dev/get-started/install/macos" target="_blank">Flutter Mac Setup</a></p>
+              <p><strong>Linux:</strong> <a href="https://docs.flutter.dev/get-started/install/linux" target="_blank">Flutter Linux Setup</a></p>
+              <p><strong>Watch this Video Tutorial:</strong></p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/QG9bw4rWqrg?si=fXN1cLG04_DO2iN7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <p>Once Flutter is installed, run the command: <strong>flutter doctor</strong> to check for setup issues.</p>
+            </li>
+            <li><strong>Stripe Account</strong> - Stripe is used for payment processing. You need to create an account on <a href="https://stripe.com/" target="_blank">Stripe</a>.</li>
+            <li><strong>Google Maps API</strong> - For location services, you need to create a Google Maps API key. Follow the setup on <a href="https://cloud.google.com/maps-platform" target="_blank">Google Maps Platform</a>.</li>
+            <li><strong>ZEGOCLOUD Account</strong> - ZEGOCLOUD is used for random live streaming. Sign up for an account at <a href="https://www.zegocloud.com/" target="_blank">ZEGOCLOUD</a> and get your AppID and AppSign.</li>
+            <li><strong>GitHub Account</strong> - For version control and code management, set up a GitHub account at <a href="https://github.com/" target="_blank">GitHub</a>.</li>
+            <li><strong>MongoDB Atlas</strong> - For managing the database, create a MongoDB Atlas account at <a href="https://www.mongodb.com/cloud/atlas" target="_blank">MongoDB Atlas</a> and set up a cluster.</li>
+            <li><strong>Railway Account</strong> - Railway is used to deploy the backend server. Create an account on <a href="https://railway.app/" target="_blank">Railway</a>.</li>
+            <li><strong>Play Console & App Store Developer Account</strong> - To publish the app, you need developer accounts for both Google Play Console and Apple App Store. Sign up at: 
+              <ul>
+                <li><a href="https://play.google.com/console/about/" target="_blank">Google Play Console</a></li>
+                <li><a href="https://developer.apple.com/programs/" target="_blank">Apple Developer Program</a></li>
+              </ul>
+            </li>
+          </ol>
+          </section>
+                
+        <section id="idocs_project">
+          <h3>Project Setup for MeetLove</h3>
+          <p><strong>Setting Up the Project:</strong>  
+            Follow these steps after setting up all your accounts:
+            <ol>
+              <li>Open Project</li>
+              <li>Integrate the Stripe API for payment handling in the backend.</li>
+              <li>Set up the Google Maps API key in the app for location and directions.</li>
+              <li>Integrate ZEGOCLOUD SDK into the Flutter app to enable random live streaming functionality.</li>
+              <li>Connect MongoDB Atlas for database storage in the backend.</li>
+              <li>Deploy the backend server on Railway.</li>
+            </ol>
+          </p>
+          
+          <h3>Backend Setup</h3>
+          <ol>
+            <li>Open <strong>dating-backend</strong> folder in <strong>VS Code</strong>.</li>
+            <li>Run the following command to install the required dependencies (Make sure you’re using Node.js v23.10.0):</li>
+            <pre>npm install</pre>
+            <li><strong>Note:</strong> If you don’t have Node.js installed on your system, follow these steps to install it:</li>
+            <ol>
+              <li>Go to the official Node.js website: <a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a></li>
+              <li>Download the appropriate version for your operating system (recommended version: <strong>v23.10.0</strong> or
+                compatible).</li>
+              <li>Run the installer and follow the instructions to complete the installation.</li>
+              <li>After installation, restart your terminal or VS Code and verify the installation by running:</li>
+              <pre>node -v</pre>
+              <li>If it shows the installed version, you’re ready to proceed with <code>npm install</code>.</li>
+            </ol>
+            
+            <li>Create a MongoDB Atlas database for your project:</li>
+            <ul>
+              <li>Go to <a href="https://www.mongodb.com/cloud/atlas" target="_blank">MongoDB Atlas</a>, create a cluster, and
+                generate the connection string.</li>
+              <li><strong>Note:</strong> If you haven’t created a MongoDB Atlas account yet, please refer to the documentation
+                section titled <strong>"6. MongoDB Atlas Setup (For Database)"</strong> above for step-by-step instructions on how
+                to create an account, create a cluster, generate the connection string, and configure security settings.</li>
+              <li>Once you have your connection string, add it to the <code>.env</code> file like this:<br>
+                <code>ATLAS_URL=&lt;your_mongodb_connection_string&gt;</code>
+              </li>
+            </ul>
+
+
+            <li>Create a Cloudinary account for media storage:</li>
+            <ul>
+              <li>Visit <a href="https://cloudinary.com/" target="_blank">Cloudinary</a> and sign up for a free account.</li>
+              <li>After logging in, go to the Dashboard to find your <strong>Cloud Name</strong>, <strong>API Key</strong>, and
+                <strong>API Secret</strong>.</li>
+              <li>These credentials are needed to upload and manage media files (images/videos) from your backend.</li>
+              <li>Add the credentials to your <code>.env</code> file like this:</li>
+              <pre>
+            CLOUDINARY_CLOUD_NAME = &lt;your_cloud_name&gt;
+            CLOUDINARY_API_KEY = &lt;your_api_key&gt;
+            CLOUDINARY_API_SECRET = &lt;your_api_secret&gt;
+              </pre>
+            </ul>
+            
+            <li>Set up the email server for sending emails (e.g., OTPs, notifications):</li>
+            <ul>
+              <li>You can use Gmail as your SMTP server or another email provider if preferred.</li>
+              <li>Make sure to enable “Less secure app access” or generate an App Password in Gmail settings if using Gmail.</li>
+              <li>Then, add the following configuration in the <code>.env</code> file:</li>
+              <pre>
+            SMTP_HOST = smtp.gmail.com
+            SMTP_PORT = 465
+            SMTP_MAIL = &lt;your_email&gt;
+            SMTP_PASSWORD = &lt;your_app_password_or_email_password&gt;
+            SMTP_SERVICE = gmail
+            SERVICE_NAME = Dating App
+              </pre>
+            </ul>
+            <li>Set up Stripe for handling payments securely:</li>
+            <ul>
+              <li>Go to the <a href="https://dashboard.stripe.com/test/apikeys" target="_blank">Stripe Dashboard</a> and log in.
+              </li>
+              <li>In <strong>Test Mode</strong>, copy your <strong>Secret Key</strong> (starts with <code>sk_test_...</code>) and
+                use it in your backend to authenticate API calls.</li>
+              <li>Install the Stripe CLI to test webhooks locally:<br>
+                <code>npm install -g stripe</code> or <a href="https://stripe.com/docs/stripe-cli" target="_blank">download from
+                  Stripe CLI page</a>.
+              </li>
+              <li>Log in to the Stripe CLI using:<br>
+                <code>stripe login</code>
+              </li>
+              <li>To forward webhook events to your local server (e.g., running at <code>http://localhost:5000</code>):<br>
+                <code>stripe listen --forward-to localhost:5000/webhook</code>
+              </li>
+              <li>After running this command, the CLI will give you a Webhook Signing Secret. Use this secret in your
+                <code>.env</code> file:</li>
+              <pre>
+            stripeSecretKey = &lt;your_stripe_secret_key&gt;
+            STRIPE_WEBHOOK_SECRET = &lt;your_webhook_secret_from_cli&gt;
+              </pre>
+              <li>Make sure your backend has a POST route to handle <code>/webhook</code> events from Stripe.</li>
+            </ul>
+
+          
+            <li>Run the server:</li>
+            <pre>npm run start</pre>
+            <p>Once the server is running, it should be ready for API calls.</p>
+          </ol>
+
+
+
+          <h3>Flutter App Setup</h3>
+          <ol>
+            <li>Open the <strong>dating-app</strong> folder in your preferred IDE (<strong>Android Studio</strong> or <strong>VS
+                Code</strong>).</li>
+          
+            <li>Update the project with your app-specific configuration:</li>
+            <ul>
+              <li><strong>Change the app name:</strong>
+                <ul>
+                  <li>Open <code>android/app/src/main/AndroidManifest.xml</code> and update the <code>android:label</code>.</li>
+                  <li>For iOS, open <code>ios/Runner/Info.plist</code> and update the <code>CFBundleDisplayName</code>.</li>
+                </ul>
+              </li>
+          
+              <li><strong>Change the package name (Android):</strong> Follow the instructions in the <em>Change App Package</em>
+                section.</li>
+          
+              <li><strong>Change the app logo:</strong>
+                <ul>
+                  <li>Replace <code>assets/image/logo.png</code> with your own logo.</li>
+                  <li>Replace <code>android/app/src/main/res/mipmap-*</code> folders with icons generated from <a
+                      href="https://www.appicon.co" target="_blank">https://www.appicon.co</a>.</li>
+                  <li>Replace <code>ios/Runner/Assets.xcassets</code> with your iOS app icon folder from the same tool.</li>
+                </ul>
+              </li>
+          
+              <li><strong>Update your environment variables or constants (e.g., in <code>.env</code> or a config file):</strong>
+                <pre>
+          BACKEND_URL = &lt;your_backend_url&gt;
+          GOOGLE_MAP_API_KEY = &lt;your_google_map_api_key&gt;
+          ZEGOCLOUD_LIVE_APP_ID = &lt;your_zegocloud_app_id&gt;
+          ZEGOCLOUD_LIVE_APP_SIGN = &lt;your_zegocloud_app_sign&gt;
+                </pre>
+              </li>
+            </ul>
+          
+            <li>Install Flutter dependencies by running:</li>
+            <pre>flutter pub get</pre>
+          
+            <li>Finally, run your app to verify everything is set up correctly:</li>
+            <pre>flutter run</pre>
+          </ol>
+
+          <h3>Flutter Web Admin Setup</h3>
+          <ol>
+            <li><strong>Open the <strong>dating-admin</strong></strong> in your preferred IDE (VS Code or Android Studio).</li>
+          
+            <li><strong>Update the app settings:</strong>
+              <ul>
+                <li>Change the app name in <code>web/index.html</code> inside the <code>&lt;title&gt;</code> tag.</li>
+                <li>Replace the favicon/logo in <code>web/icons/</code> folder as needed.</li>
+                <li>Update the backend URL in your app’s configuration file (usually in a constants or environment file).</li>
+              </ul>
+            </li>
+          
+            <li><strong>Install the Flutter dependencies:</strong></li>
+            <pre>flutter pub get</pre>
+          
+            <li><strong>Run the Flutter Web App:</strong></li>
+            <pre>flutter run -d chrome</pre>
+          
+            <li><strong>Test the admin panel</strong> in the browser to ensure everything is functioning as expected.</li>
+          
+            <li><strong>Deploy your admin panel:</strong> After testing, you can deploy your Flutter web admin to any static
+              hosting service like Firebase Hosting, Cloudflare Pages, or Vercel.</li>
+          </ol>
+          
+          <h4>Express.js Backend Setup</h4>
+          <ol>
+            <li><strong>Open the Node.js backend project</strong> in VS Code.</li>
+            <li><strong>Install dependencies:</strong></li>
+            <pre>npm install</pre>
+            <li><strong>Ensure you have Node.js v23.10.0 installed. If not, download from <a href="https://nodejs.org"
+                  target="_blank">nodejs.org</a>.</strong></li>
+          
+            <li><strong>Run the backend server:</strong></li>
+            <pre>node index.js</pre>
+            <p><em>Or use:</em> <code>npm run dev</code> if you use nodemon.</p>
+          
+            <li><strong>Set up Socket.IO and CORS in your backend (index.js or server.js):</strong></li>
+            <pre><code>
+          // Set up Socket.IO-----------------
+          const { Server } = require("socket.io");
+          const server = require("http").createServer(app);
+          
+          const socketIO = new Server(server, {
+            pingTimeout: 60000,
+            cors: {
+              origin: [
+                'http://localhost:49871',
+                'https://dating-admin-panel.pages.dev',
+                'http://dating-admin-panel.pages.dev',
+                'https://dating-admin-seven.vercel.app',
+              ],
+              credentials: true,
+            },
+          });
+          
+          // Enable CORS-----------------
+          const cors = require("cors");
+          app.use(
+            cors({
+              origin: [
+                'http://localhost:49871',
+                'https://dating-admin-panel.pages.dev',
+                'http://dating-admin-panel.pages.dev',
+                'https://dating-admin-seven.vercel.app',
+              ],
+              credentials: true,
+            })
+          );
+            </code></pre>
+          </ol>
+          
+          <p><strong>Important:</strong> Before running your Flutter apps (Android and Web), ensure that the backend server is
+            running properly with all environment variables (.env) configured, MongoDB connected, and CORS set up for your
+            frontend domains.</p>
+          
+          <p><strong>Final Step:</strong> Once everything is tested and confirmed:
+          <ul>
+            <li>Push your Flutter and backend projects to GitHub.</li>
+            <li>Deploy the backend to Railway or any Node.js hosting platform.</li>
+            <li>Deploy the Web Admin Panel to Firebase Hosting, Vercel, or Cloudflare Pages.</li>
+          </ul>
+          </p>
+          
+          <p>After completing these steps, your MeetLove application will be fully operational on Android, iOS, and Web platforms
+            with an integrated Admin Dashboard.</p>
+
+            <section id="backend_cors_setup">
+              <h2>Enable CORS in Express.js Backend</h2>
+              <p>CORS (Cross-Origin Resource Sharing) is required to allow your frontend (Flutter Web Admin) to communicate with the
+                backend server.</p>
+              <ol>
+            
+                <li>In your <code>index.js</code> and <code>app.js</code>, import and configure CORS:</li>
+                <pre><code>
+            const cors = require('cors');
+            
+            app.use(cors({
+              origin: [
+                'http://localhost:49871', // Add Your URL
+                'https://dating-admin-panel.pages.dev',
+                'http://dating-admin-panel.pages.dev',
+                'https://dating-admin-seven.vercel.app'
+              ],
+              credentials: true
+            }));
+                </code></pre>
+            
+                <li>This setup allows your Flutter web admin panel to connect with the backend API securely across different
+                  domains.</li>
+              </ol>
+            </section>
+
+        
+        
+        <hr class="divider">
+        
+        <!-- How to Create Accounts ============================ -->
+        <section id="idocs_accountSetup">
+          <h2>Account Setup</h2>
+          <p>In order to use MeetLove, you will need to set up a few accounts for different services like Firebase, Stripe, Google Maps, and others. Here’s a step-by-step guide to get you started:</p>
+        </section>       
+        <!-- How to Create Accounts ============================ -->
+        
+    <!-- HTML Structure ============================ -->
+    <section id="idocs_html_firebase">
+      <h3>1. Firebase Account Setup</h3>
+      <p>Right now no need</p>
+      <!-- <p>Firebase provides the backend for MeetLove's authentication and real-time chat features.</p> -->
+      <!-- <ul>
+        <li>Go to <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a></li>
+        <li>Click "Add Project" and follow the on-screen instructions to create a new Firebase project.</li>
+        <li>Enable Firebase Authentication and Firebase Firestore for user data storage.</li>
+        <li>Download your Firebase config file (google-services.json for Android, GoogleService-Info.plist for iOS).</li>
+        <li>Integrate Firebase SDKs into your Flutter project by following the official Firebase setup guide for Flutter.</li>
+      </ul>
+     -->
+    </section>
+  
+    <hr class="divider">  
+    
+    <!-- HTML Structure ============================ -->
+    <section id="idocs_html_stripe">
+      <h3>2. Stripe Account Setup</h3>
+         <p>To enable payments on MeetLove, you need to set up a Stripe account for payment processing. Follow these steps to create a Stripe account and get your live API keys:</p>
+         <ul>
+           <li><strong>Step 1: Create a Stripe Account</strong>
+             <ul>
+               <li>Go to <a href="https://dashboard.stripe.com/register" target="_blank">Stripe Registration</a> to sign up for a Stripe account.</li>
+               <li>Fill in the required details such as email, business information, and create a password.</li>
+               <li>Complete the verification process (this may include verifying your email address and business details).</li>
+               <li>Once your account is created, you’ll be redirected to the Stripe Dashboard.</li>
+             </ul>
+           </li>
+         
+           <li><strong>Step 2: Get Live API Keys</strong>
+             <ul>
+               <li>In the Stripe Dashboard, go to the <strong>Developers</strong> section in the left-hand menu.</li>
+               <li>Click on <strong>API keys</strong> to access your live and test API keys.</li>
+               <li>You will see two types of keys: 
+                 <ul>
+                   <li><strong>Publishable Key</strong>: This key is used on the client side (Flutter app) to initiate payments.</li>
+                   <li><strong>Secret Key</strong>: This key is used on the server side (backend) to handle the payment processing securely.</li>
+                 </ul>
+               </li>
+               <li>Make sure you're in the "Live" mode to get live keys. The keys will look like this:
+                 <pre><code>sk_live_xxxxxxx</code></pre> (for the secret key)
+                 <pre><code>pk_live_xxxxxxx</code></pre> (for the publishable key)
+               </li>
+               <li>Copy both the secret and publishable keys for use in your backend and Flutter app.</li>
+             </ul>
+           </li>
+         
+           <li><strong>Step 3: Integrating the Stripe Keys in Your Backend</strong>
+             <ul>
+               <li>In your backend (Node.js), you need to add the Stripe API keys to your environment variables for security. Open your `.env` file (make sure it's in your project’s root directory).</li>
+               <li>Add the following lines to your `.env` file:
+                 <pre><code>stripeSecretKey=sk_live_xxxxxxx</code></pre>
+               </li>
+               <li>Replace <strong>sk_live_xxxxxxx</strong> and <strong>pk_live_xxxxxxx</strong> with the actual keys you obtained from the Stripe Dashboard.</li>
+               <li>This ensures that your Stripe keys are securely stored and not exposed in your source code.</li>
+             </ul>
+           </li>
+         </ul>
+    </section>
+  
+    <hr class="divider">
+    <!-- HTML Structure ============================ -->
+    <section id="idocs_html_google_map">
+      <h3>3. Google Maps API Key</h3>
+      <p>For location-based services such as showing the current location and directions, you need to set up a Google Maps API key and enable specific Google APIs for your app to work correctly.</p>
+      <ul>
+       <li>Go to <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a>.</li>
+       <li>Create a new project in the console if you haven’t already.</li>
+       <li>Enable the following APIs for your project:
+         <ul>
+           <li><strong>Google Maps SDK for Android</strong></li>
+           <li><strong>Google Maps SDK for iOS</strong></li>
+           <li><strong>Directions API</strong></li>
+         </ul>
+       </li>
+       <li>Generate an API key by navigating to the "Credentials" section in the Google Cloud Console.</li>
+       <li>Once the API key is generated, restrict it as needed (e.g., limit usage to your app’s package name or HTTP referrers).</li>
+       <li>In your Flutter app, add the Google Maps API key in the following files:</li>
+       <ul>
+         <li><strong>lib/utils/app_const/app_const.dart</strong>:
+           <pre>
+             // app_const.dart
+             String googleMapAPI = 'YOUR_GOOGLE_MAPS_API_KEY';  <!-- Replace with your actual API key -->
+           </pre>
+         </li>
+         <li><strong>AndroidManifest.xml</strong> (Android project):
+           <pre>
+             // android/app/src/main/AndroidManifest.xml
+             <meta-data 
+               android:name="com.google.android.geo.API_KEY" 
+               android:value="YOUR_GOOGLE_MAPS_API_KEY" />  <!-- Replace with your actual API key -->
+           </pre>
+         </li>
+       </ul>
+       <li><strong>Important:</strong> Replace <code>YOUR_GOOGLE_MAPS_API_KEY</code> with the actual API key you received from Google Cloud Console.</li>
+     </ul>
+    </section>
+  
+    <hr class="divider">
+    
+    <!-- HTML Structure ============================ -->
+    <section id="idocs_html_github">
+      <h3 >4. GitHub Account Setup (For Version Control)</h3>
+      <p  style="color: red;">If you have set up all the code and it's working fine locally, you can now proceed to upload your project to GitHub. Follow the steps below to create your GitHub account, initialize your local project, and upload it to GitHub in three separate repositories:</p>
+      <ul>
+        <li><strong>Step 1: Create a GitHub Account</strong>
+          <ul>
+            <li>Go to <a href="https://github.com/" target="_blank">GitHub</a>.</li>
+            <li>Click on <strong>Sign up</strong> to create a free account if you don't have one.</li>
+            <li>Fill out the sign-up form and complete the verification process.</li>
+            <li>Once you're signed up, log in to your GitHub account.</li>
+          </ul>
+        </li>
+        <li><strong>Step 2: Install Git</strong>
+          <ul>
+            <li>Visit <a href="https://git-scm.com/downloads" target="_blank">Git Downloads</a> and download Git for your operating system (Windows, macOS, or Linux).</li>
+            <li>Run the installer and follow the default installation steps. For Windows users, you can use Git Bash.</li>
+            <li>After installation, open your terminal or Git Bash and type <code>git --version</code> to check if Git was installed successfully.</li>
+          </ul>
+        </li>
+        <li><strong>Step 3: Set Up Global Git Configuration</strong>
+          <ul>
+            <li>Open your terminal or Git Bash.</li>
+            <li>Set your username and email for Git by running these commands:
+              <pre><code>git config --global user.name "Your Name"</code></pre>
+              <pre><code>git config --global user.email "youremail@example.com"</code></pre>
+            </li>
+          </ul>
+        </li>
+        <li><strong>Step 4: Initialize Git in Your Project</strong>
+          <ul>
+            <li>Navigate to your project directory using the terminal (inside Android Studio or VS Code, you can open the terminal tab).</li>
+            <li>Run the following command to initialize a Git repository:
+              <pre><code>git init</code></pre>
+            </li>
+            <li>This will create a new Git repository in your project folder.</li>
+          </ul>
+        </li>
+        <li><strong>Step 5: Create Three GitHub Repositories (For Backend, App, and Dashboard)</strong>
+          <ul>
+            <li>Go to your GitHub dashboard and click the <strong>+</strong> icon in the top-right corner, then select <strong>New repository</strong>.</li>
+            <li>Create three private repositories for your project:
+              <ul>
+                <li><strong>MeetLove-Backend</strong>: For the Node.js backend.</li>
+                <li><strong>MeetLove-App</strong>: For the Flutter mobile app (Android and iOS).</li>
+                <li><strong>MeetLove-Dashboard</strong>: For the Flutter Web Admin Dashboard.</li>
+              </ul>
+            </li>
+            <li>Make sure each repository is set to <strong>Private</strong> for security purposes.</li>
+          </ul>
+        </li>
+        <li><strong>Step 6: Add GitHub Remote Repositories to Your Project</strong>
+          <ul>
+            <li>Go back to your terminal and link your local project to the GitHub repositories by running the following commands:
+              <pre><code>git remote add origin https://github.com/yourusername/MeetLove-App.git</code></pre>
+              <pre><code>git remote add origin https://github.com/yourusername/MeetLove-Backend.git</code></pre>
+              <pre><code>git remote add origin https://github.com/yourusername/MeetLove-Dashboard.git</code></pre>
+            </li>
+          </ul>
+        </li>
+        <li><strong>Step 7: Add and Commit Your Files to Git</strong>
+          <ul>
+            <li>Run the following command to add all files in your project to Git:
+              <pre><code>git add .</code></pre>
+            </li>
+            <li>Commit the files with a message:
+              <pre><code>git commit -m "Initial commit"</code></pre>
+            </li>
+          </ul>
+        </li>
+        <li><strong>Step 8: Push Your Project to GitHub</strong>
+          <ul>
+            <li>Now, push your local project to GitHub using:
+              <pre><code>git push -u origin master</code></pre>
+            </li>
+            <li>Repeat this for each of the three repositories:
+              <pre><code>git push -u origin master</code></pre>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p><strong style="color: red;">Your GitHub repositories are now set up, and your project is uploaded to GitHub!</strong></p>
+
+      <h3>5. ZEGOCLOUD Account Setup (For Random Video Call Feature)</h3>
+      <p>ZEGOCLOUD is used for the random one-on-one video call feature in MeetLove, allowing users to connect with each other via video calls. Here's how to set it up:</p>
+      <ul>
+        <li>Go to <a href="https://www.zegocloud.com/" target="_blank">ZEGOCLOUD</a> and sign up for a free account.</li>
+        <li>Once you're logged in, go to the <strong>Dashboard</strong> to create a new project:</li>
+          <ul>
+            <li>Click on <strong>New Project</strong> in the ZEGOCLOUD dashboard.</li>
+            <li>Choose the project type based on your app's requirements (select "Video Call" for one-on-one video calling).</li>
+            <li>Give your project a name (e.g., "MeetLove Video Call") and click <strong>Create Project</strong>.</li>
+          </ul>
+        <li>After creating your project, you will be taken to the <strong>Project Dashboard</strong>. Here, you'll find two essential pieces of information: <strong>AppID</strong> and <strong>AppSign</strong>:
+          <ul>
+            <li><strong>AppID:</strong> This is a unique identifier for your project in the ZEGOCLOUD system.</li>
+            <li><strong>AppSign:</strong> This is the key that you will use to authenticate your project with ZEGOCLOUD services.</li>
+          </ul>
+        </li>
+        <li>Copy the <strong>AppID</strong> and <strong>AppSign</strong> values from the ZEGOCLOUD Dashboard.</li>
+        <li>In your Flutter project, you will need to set these values in your app's constants. Open the <strong>lib/utils/app_const/app_const.dart</strong> file and add the following lines:</li>
+        <pre>
+          static const int liveAppId = YOUR_APP_ID;  <!-- Replace with your ZEGOCLOUD AppID -->
+          static const String liveAppSign = "YOUR_APP_SIGN";  <!-- Replace with your ZEGOCLOUD AppSign -->
+        </pre>
+        <li>After adding the AppID and AppSign to the app_const.dart file, you can now integrate the ZEGOCLOUD SDK into your Flutter app for the one-on-one video call feature.</li>
+        <li>To integrate the ZEGOCLOUD SDK, follow the official documentation from ZEGOCLOUD to add the necessary dependencies and configure the SDK in your Flutter project:</li>
+          <ul>
+            <li>Set up the video call feature in your app as per ZEGOCLOUD's documentation.</li>
+          </ul>
+      </ul>
+    </section>
+    
+    <!-- HTML Structure ============================ -->
+    <section id="idocs_html_mongodb">
+      <h3>6. MongoDB Atlas Setup (For Database)</h3>
+      <p>MongoDB Atlas is a fully-managed cloud database service. Follow these steps to set up MongoDB Atlas and connect it to your Node.js backend:</p>
+      <ul>
+        <li>Go to <a href="https://www.mongodb.com/cloud/atlas" target="_blank">MongoDB Atlas</a> and sign up for an account.</li>
+        
+        <li>Create a new cluster for your project:</li>
+          <ul>
+            <li>Click on the <strong>Build a Cluster</strong> button on the MongoDB Atlas dashboard.</li>
+            <li>Choose your cloud provider and region (e.g., AWS, GCP, or Azure).</li>
+            <li>Select the free tier (M0) or any other tier based on your requirements.</li>
+            <li>Click on <strong>Create Cluster</strong> and wait for the cluster to be provisioned. This may take a few minutes.</li>
+          </ul>
+          
+        <li>After your cluster is ready, you need to create a database:</li>
+          <ul>
+            <li>In the <strong>Clusters</strong> section, click on the <strong>Collections</strong> button for your cluster.</li>
+            <li>Click on <strong>Create Database</strong> to set up a new database.</li>
+            <li>Give your database a name (e.g., "meetlove") and add a collection (e.g., "users").</li>
+          </ul>
+        
+        <li>Now, configure the database security settings:</li>
+          <ul>
+            <li>Click on the <strong>Database Access</strong> tab in the left sidebar under the "Security" section.</li>
+            <li>Click on <strong>+ ADD NEW DATABASE USER</strong> to create a new user for your application.</li>
+            <li>Enter a username and password for the new user. Ensure you choose the correct database and give appropriate permissions, such as "Read and Write to any database" if required.</li>
+            <li>Click <strong>Add User</strong> to create the user.</li>
+          </ul>
+      
+        <li>Set up IP Whitelisting to allow your application to connect:</li>
+          <ul>
+            <li>Go to the <strong>Network Access</strong> tab under the "Security" section.</li>
+            <li>Click on <strong>+ ADD IP ADDRESS</strong> to allow specific IP addresses or click on <strong>Allow Access from Anywhere</strong> to permit connections from any IP (not recommended for production).</li>
+          </ul>
+          
+        <li>Get the connection string (MongoDB URL):</li>
+          <ul>
+            <li>Go to the <strong>Clusters</strong> tab.</li>
+            <li>Click on <strong>Connect</strong> for your cluster.</li>
+            <li>Choose <strong>Connect Your Application</strong> and select your connection method (e.g., Node.js).</li>
+            <li>Copy the provided connection string. It will look like this:</li>
+            <pre>mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority</pre>
+            <li>Replace <code><username></code> and <code><password></code> with the credentials you just created, and replace <code><dbname></code> with the database name (e.g., "meetlove").</li>
+          </ul>
+        
+        <li>Integrate the MongoDB connection string into your Node.js backend:</li>
+          <ul>
+            <li>In your backend project, open the <strong>.env</strong> file (or create it if it doesn't exist).</li>
+            <li>Add the MongoDB connection string as a variable in the <strong>.env</strong> file:</li>
+            <pre>
+      MONGO_URL="mongodb+srv://<username>:<password>@cluster0.mongodb.net/meetlove?retryWrites=true&w=majority"
+            </pre>
+          </ul>
+    
+      </ul>
+    </section>
+    
+    <!-- HTML Structure ============================ -->
+    <section id="idocs_html_railway">
+      <h3>7. Railway Setup (For Server Hosting)</h3>
+          <p>Railway is a platform that allows you to easily deploy your Node.js backend and Web Admin Dashboard. Follow these steps to deploy your server using Railway and integrate GitHub for automatic deployment:</p>
+          
+          <ul>
+            <li>Go to <a href="https://railway.app/" target="_blank">Railway</a> and sign up for an account.</li>
+            <li>Create a new project on Railway:</li>
+              <ul>
+                <li>Click on <strong>New Project</strong> in the Railway dashboard.</li>
+                <li>Select <strong>Deploy from GitHub</strong>.</li>
+                <li>Connect your GitHub account to Railway by authorizing Railway to access your repositories.</li>
+                <li>Choose the repository for your Node.js backend project (make sure you have already uploaded your backend project to GitHub).</li>
+                <li>Railway will automatically detect the type of project (Node.js) and suggest a suitable template.</li>
+                <li>Click <strong>Deploy</strong> to start the deployment process.</li>
+              </ul>
+            <li>Set up environment variables for your project:</li>
+              <ul>
+                <li>After deployment, you can add environment variables by going to the <strong>Environment Variables</strong> section in Railway.</li>
+                <li>Add any necessary variables like <strong>MONGO_URL</strong> for MongoDB, <strong>STRIPE_SECRET_KEY</strong> for Stripe, or any other keys you need to keep secure.</li>
+              </ul>
+            <li>Ensure that your server is running properly by checking the logs in Railway:</li>
+              <ul>
+                <li>Click on the <strong>Logs</strong> tab to monitor your server’s status and view any error messages.</li>
+              </ul>
+            <li>Important: Once your project is complete and you have uploaded it to GitHub, make sure that your server is deployed and functioning properly on Railway before you proceed with the Flutter web and Node.js backend deployment.</li>
+            <li>Notice for Flutter Web and Node.js Backend:</li>
+              <ul>
+                <li>Once your Node.js backend and Web Admin Dashboard are successfully deployed to Railway, the backend should be accessible via a URL provided by Railway.</li>
+                <li>In your Flutter web app, ensure that your API calls are directed to the Railway-hosted backend instead of local endpoints (e.g., replace `http://localhost:5000` with the Railway URL).</li>
+                <li>Test the integration thoroughly to ensure that the Flutter web app communicates correctly with the deployed backend server.</li>
+              </ul>
+          </ul>
+    </section>
+    
+    <!-- HTML Structure ============================ -->
+    <section id="idocs_html_cloudnary">
+      <h3>6. Cloudinary Account Setup (For Media Upload)</h3>
+      <p>Cloudinary is used for storing and managing images and videos for your app. Here’s how to set it up:</p>
+      <ul>
+        <li><strong>Go to Cloudinary:</strong> Visit <a href="https://cloudinary.com/" target="_blank">Cloudinary</a> and sign up for an account.</li>
+        <li><strong>Get Your API Credentials:</strong> After signing up and logging in, go to the <strong>Account Settings</strong> section in the Cloudinary dashboard.</li>
+        <li><strong>Find the API Key, API Secret, and Cloud Name:</strong> You will see your Cloudinary API credentials under the <strong>API Keys</strong> section. Copy the following values:</li>
+        <ul>
+          <li><strong>Cloud Name:</strong> bbwoifkyf</li>
+          <li><strong>API Key:</strong> 5665464564</li>
+          <li><strong>API Secret:</strong> yrtyrtyrtyrty</li>
+        </ul>
+        <li><strong>Add the Credentials to Your .env File:</strong> In your project, create or modify the <strong>.env</strong> file to store the Cloudinary credentials securely. Add the following lines:</li>
+        <pre>
+          CLOUDINARY_CLOUD_NAME1=bbwoifkyf
+          CLOUDINARY_API_KEY1=67725656469983226
+          CLOUDINARY_API_SECRET1=AHo65yty5yetUHnc6TRxcKfchN0y0
+        </pre>
+        <li><strong>Important:</strong> Replace the credentials with your actual values from the Cloudinary dashboard. This step ensures that your app can securely access Cloudinary services.</li>
+      </ul>
+    </section>
+    
+    <!-- HTML Structure ============================ -->
+    <section id="idocs_html_app_upload">
+      <h3>8. Play Console and App Store Account Setup</h3>
+      <p>To publish your app on the Google Play Store and Apple App Store, you need to set up developer accounts:</p>
+      <ul>
+        <li><strong>For Play Console:</strong> Go to <a href="https://play.google.com/console/about/" target="_blank">Google Play Console</a>, sign up for an account, and pay the one-time registration fee.</li>
+        <li><strong>For App Store:</strong> Go to <a href="https://developer.apple.com/programs/" target="_blank">Apple Developer Program</a>, sign up for an account, and pay the annual registration fee.</li>
+      </ul>
+      <p>Once you have completed the registration process, you will have access to the Play Console and App Store Connect, where you can manage your app, track its performance, and update its details.</p>
+      
+    
+    </section>
+  
+    <hr class="divider">
+		        
+		<!-- Installation
+		============================ -->
+        <!-- <section id="idocs_sass">
+          <h2>Installation</h2>
+          <ol>
+            <li>Unzip the downloaded file and open folder to find all the files.</li>
+            <li>Below is the folder structure:
+            <ul>
+			     <li>
+			     <ul>
+            <li><code>documentation</code> - Documentation Folder</li>
+            <li><code>webview_admin</code> - Admin App All files</li>
+            <li><code>webview</code> - User App All files</li>
+          </ul>!
+			     </li>
+			     </ul>
+            </li>
+            <li>Unzip the admin folder and open project on IDE</li>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dfZAMx8LMuk?si=Z86-bsEoxj7w9DlK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </ol>
+        </section>
+        
+		<hr class="divider"> -->
+
+        
+<!-- HTML Structure
+============================ -->
+<section id="idocs_html_structure">
+  <h2>Change App Logo</h2>
+  <p><strong>Generated app icon: <a href="https://www.appicon.co/" target="_blank">https://www.appicon.co</a></strong></p>
+  
+  <h3>For Flutter Android/iOS App:</h3>
+  <ol>
+    <li>Go to <strong>project/assets/image/</strong> and replace <code>logo.png</code> with your custom logo file.</li>
+    <li>For Android:
+      <ul>
+        <li>Navigate to <strong>/android/app/src/main/res</strong>.</li>
+        <li>Replace all the <code>mipmap</code> folders with your generated icon folders (from the appicon.co tool).</li>
+      </ul>
+    </li>
+    <li>For iOS:
+      <ul>
+        <li>Navigate to <strong>/ios/Runner</strong> and open the <code>Assets.xcassets</code> folder.</li>
+        <li>Replace the existing logo icon with your generated icon in the <strong>Assets.xcassets</strong> folder.</li>
+      </ul>
+    </li>
+  </ol>
+  
+  <h3>For Flutter Web Admin:</h3>
+  <ol>
+    <li>Go to the <strong>web/assets/images/</strong> folder in your Flutter web project.</li>
+    <li>Replace <code>logo.png</code> with your custom logo image.</li>
+    <li>Make sure the logo size and resolution are appropriate for web usage.</li>
+  </ol>
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/IO5ne45TKJ0?si=zMs6JnR4t2wJjxG-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+
+<hr class="divider">
+
+		
+		<!-- Color Schemes
+		============================ -->
+        <section id="idocs_color_schemes">
+          <h2>Change App Name</h2>
+          <p>You need to set your app name in three different place.</p>
+          <ol>
+            <li>Open <strong>project/lib/constant/app_constant.dart</strong> and set the value of <strong>app_name</strong></li>
+            <div class="alert alert-success">
+              project/lib/constant/app_constant.dart<br>
+              <p><strong>static const String app_name = "My App";</strong></p>
+            </div>
+            <li>Change the value of <strong>label</strong> from <strong>project/android/app/src/main/AndroidManifest.xml</strong></li>
+            <div class="alert alert-success">
+              project/android/app/src/main/AndroidManifest.xml<br>
+              <p><strong> android:label="My App"</strong></p>
+            </div>
+            <li>Change the value of <strong>CFBundleName</strong>r from  <strong>project/iOS/Runner/info.plist</strong></li>
+            <div class="alert alert-success">
+              project/iOS/Runner/info.plist<br>
+              <p><strong> <key>CFBundleName</key>
+                <string>My App</string></strong></p>
+            </div>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bbIe6gn6S1w?si=I-gM1l1L4miBWtF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </ol>
+        </section>
+        
+		<hr class="divider">
+		
+<!-- Customization
+============================ -->
+<section id="idocs_theme_customization">
+  <h2>Change App Package Name</h2>
+
+  <p><strong>For Android App:</strong></p>
+  <ol>
+    <li>Open the <strong>AndroidManifest.xml</strong> file in <strong>/android/app/src/main/</strong> folder to find the
+      existing package name. The package name is listed as follows:</li>
+    <pre><code>package="com.example.appname"</code></pre>
+    <li>Now, right-click on the project folder in <strong>Android Studio</strong> and click on <strong>Replace in
+        Path</strong>.</li>
+    <li>In the popup window:
+      <ul>
+        <li>In the first box, enter the existing package name you found in <strong>AndroidManifest.xml</strong>.</li>
+        <li>In the second box, enter your preferred package name.</li>
+        <li>Click the <strong>Replace All</strong> button to replace the package name throughout the project.</li>
+      </ul>
+    </li>
+    <li>After replacing the package name, make sure to update the package name in the <strong>build.gradle</strong> file
+      as well, under the <code>applicationId</code> field:</li>
+    <pre><code>applicationId "com.new.package.name"</code></pre>
+    <li>Also, update the <strong>main.dart</strong> file or other configuration files that may reference the old package
+      name.</li>
+  </ol>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/4M0LmTjBuKk?si=f9CgTFanKDVuQtDz"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</section>
+
+<hr class="divider">
+
+		
+        <!-- Logo Settings
+		============================ -->
+        <!-- <section id="idocs_logo_settings">
+          <h2>Setup Firebase</h2>
+          <p><strong style="color: rgb(219, 97, 97);"><b>WARNING : </b></strong><strong> First you have to change your package name.</strong></p>
+          <li>Create your own firebase project from <a href="https://console.firebase.google.com" target="_blank" >https://console.firebase.google.com</a> and also add an android app there with your own <strong>package name</strong> and <strong>app name</strong>.</li>
+          <li>Click register app and download <strong>google-services.json </strong> file from there.</li>
+          <li>Copy that file and paste it under <strong>project/android/app/</strong> folder.</li>
+          <li>For IOS again create an app under same project and download <strong>GoogleService-Info.plist</strong>r and paste it under <project>/iOS/ folder. Also follow this documentation for full setup for IOS: <a href="https://firebase.flutter.dev/docs/messaging/apple-integration" target="_blank">https://firebase.flutter.dev/docs/messaging/apple-integration</a></li>
+          <p>After your setup please restart your IDE and uninstall your previously installed app then run it. Also don’t try to test it on emulator or simulator. Emulator and simulators are unable to get push. Use real device in this case.</p>
+          <li>Then Create Cloud Firestore / Firebase Firestore</li>
+          <li>Then enable auth firebase and add email and password login then <strong>add user(this email and password login is Admin login credentials)</strong></li>
+          <li>then go to Project settings -> Cloud Messaging -> enable Cloud Messaging API (Legacy) then copy <strong>server key</strong> and paste admin app</li>
+
+          <br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uRNbTgfKeD4?si=jAMwbRnKL5muRKfN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+		
+        
+		<hr class="divider">  -->
+           <!-- Logo Settings
+		============================ -->
+        <!-- <section id="setup_admob_settings">
+          <h2>Setup Admob Ads</h2>
+          <li>You can find it out from top of <strong>User App</strong> /app/src/main/AndroidManifest.xml file.</li>
+          <li>You can find it out android:name="com.google.android.gms.ads.APPLICATION_ID"</li>
+          <div class="alert alert-success">
+            <p> android:value="ca-app-pub-8306428234720432~4439124293"/></p>
+            <p> Replace this ID: ca-app-pub-8306428234720432~4439124293</p>
+          </div>
+          <li>then go to lib\constant\app_constant.dart/li>
+            <li>change interstitialAdsId</li>
+            <li>change rewardedAdsId</li>
+            <li>finaly admin app ads settings add interstitialAdsId && rewardedAdsId</li>
+        </section>
+		
+        
+		<hr class="divider"> -->
+
+            <!-- Logo Settings
+		============================ -->
+    <section id="build_apk_aab">
+      <h2>App Build & Release</h2>
+    
+      <h3>Build for Android (APK/AAB)</h3>
+      <p>To release your Flutter Android app, follow these steps:</p>
+      <ol>
+        <li>Run this command to build a release APK:</li>
+        <div class="alert alert-success">
+          <code>flutter build apk</code>
+        </div>
+    
+        <li>To generate smaller APKs per architecture, run:</li>
+        <div class="alert alert-success">
+          <code>flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi</code>
+        </div>
+    
+        <li>To build an AAB file (for uploading to Play Store):</li>
+        <div class="alert alert-success">
+          <code>flutter build appbundle</code>
+        </div>
+    
+        <li>Locate your release files:</li>
+        <ul>
+          <li>APK: <code>build/app/outputs/flutter-apk/app-release.apk</code></li>
+          <li>AAB: <code>build/app/outputs/bundle/release/app-release.aab</code></li>
+        </ul>
+    
+        <li>Sign the APK or AAB (if not already configured): <a
+            href="https://docs.flutter.dev/deployment/android#signing-the-app" target="_blank">Flutter Signing Docs</a></li>
+    
+        <li>Go to the <a href="https://play.google.com/console/about/" target="_blank">Google Play Console</a> and create a
+          new app.</li>
+        <li>Fill in all required information: app details, graphics, content rating, etc.</li>
+        <li>Upload your <strong>AAB file</strong> under “Release > Production > Create New Release”.</li>
+        <li>Submit the release and wait for review.</li>
+      </ol>
+    
+      <h3>Build for iOS</h3>
+      <p>Apple does not allow installing release builds directly. You must upload via TestFlight or the App Store:</p>
+      <ol>
+        <li>Open your Flutter project in Xcode (required for iOS builds).</li>
+        <li>Ensure that your <code>ios/Runner.xcodeproj</code> has the correct signing team and bundle identifier.</li>
+        <li>Run this command to build the iOS app:</li>
+        <div class="alert alert-success">
+          <code>flutter build ios --release</code>
+        </div>
+        <li>Archive the app in Xcode (Product > Archive).</li>
+        <li>Upload it via the Organizer window to App Store Connect.</li>
+        <li>Log in to <a href="https://appstoreconnect.apple.com/" target="_blank">App Store Connect</a>.</li>
+        <li>Create a new app record if needed and fill in app details.</li>
+        <li>Submit your uploaded build to TestFlight or directly to the App Store for review.</li>
+      </ol>
+    
+      <p>For detailed deployment guides, refer to official Flutter docs:</p>
+      <ul>
+        <li><a href="https://docs.flutter.dev/deployment/android" target="_blank">Android Deployment</a></li>
+        <li><a href="https://docs.flutter.dev/deployment/ios" target="_blank">iOS Deployment</a></li>
+      </ul>
+    </section>
+
+
+
+    <section id="common_issues">
+      <h2>Common Issues in Flutter App & Node.js Backend</h2>
+    
+      <div class="expandable" onclick="toggleContent('flutter-dependency')">
+        <h3>1. Flutter App: Dependency Issues <span id="arrow1" class="arrow">&#9654;</span></h3>
+        <div id="flutter-dependency" class="content" style="display:none;">
+          <p><strong>Issue:</strong> "flutter pub get" fails due to conflicting versions or missing dependencies.</p>
+          <p><strong>Solution:</strong> Run the following commands to resolve dependencies:</p>
+          <ul>
+            <li><code>flutter clean</code> - Clears build cache.</li>
+            <li><code>flutter pub upgrade</code> - Updates all dependencies to the latest versions.</li>
+            <li>If issues persist, manually resolve version conflicts in <code>pubspec.yaml</code>.</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="expandable" onclick="toggleContent('node-mongo')">
+        <h3>2. Node.js Backend: MongoDB Connection Error <span id="arrow2" class="arrow">&#9654;</span></h3>
+        <div id="node-mongo" class="content" style="display:none;">
+          <p><strong>Issue:</strong> "MongooseError: connect ECONNREFUSED" or other MongoDB connection errors.</p>
+          <p><strong>Solution:</strong> Check the following:</p>
+          <ul>
+            <li>Ensure the MongoDB Atlas URL in your <code>.env</code> file is correct.</li>
+            <li>Verify the database is running and accessible.</li>
+            <li>Check your MongoDB Atlas IP whitelist to allow connections from your server's IP.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="expandable" onclick="toggleContent('flutter-crash')">
+        <h3>3. Flutter App: App Crashes on Launch <span id="arrow5" class="arrow">&#9654;</span></h3>
+        <div id="flutter-crash" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Flutter app crashes on launch with no clear error.</p>
+          <p><strong>Solution:</strong> Check the following:</p>
+          <ul>
+            <li>Run the app with <code>flutter run --verbose</code> to get more detailed logs.</li>
+            <li>Ensure that your <code>flutter doctor</code> shows no errors.</li>
+            <li>If the issue is with iOS, ensure that the <code>Info.plist</code> file is correctly configured.</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="expandable" onclick="toggleContent('node-cors')">
+        <h3>4. Node.js Backend: CORS Issues <span id="arrow4" class="arrow">&#9654;</span></h3>
+        <div id="node-cors" class="content" style="display:none;">
+          <p><strong>Issue:</strong> "CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested
+            resource."</p>
+          <p><strong>Solution:</strong> Make sure that you have properly set up CORS in your Node.js backend:</p>
+          <ul>
+            <li>Install the <code>cors</code> package: <code>npm install cors</code></li>
+            <li>In your <code>app.js</code> or main backend file, add the following:</li>
+            <pre>
+              const cors = require('cors');
+              app.use(cors({
+                origin: ['http://localhost:3000', 'https://your-app-url.com'],
+                credentials: true
+              }));
+            </pre>
+          </ul>
+        </div>
+      </div>
+
+      <div class="expandable" onclick="toggleContent('node-express')">
+        <h3>5. Node.js Backend: Express App Not Responding <span id="arrow6" class="arrow">&#9654;</span></h3>
+        <div id="node-express" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Express app is not responding or taking too long to process requests.</p>
+          <p><strong>Solution:</strong> Check the following:</p>
+          <ul>
+            <li>Ensure that the server is correctly running: <code>node app.js</code> (or the main server file).</li>
+            <li>Check if the routes are set up properly in your Express app.</li>
+            <li>Verify the server is listening on the correct port (e.g., <code>app.listen(3000)</code>).</li>
+            <li>Look for any unhandled errors in the logs that could cause the app to hang.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('flutter-build')">
+        <h3>6. Flutter App: Build Fails <span id="arrow7" class="arrow">&#9654;</span></h3>
+        <div id="flutter-build" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Flutter build fails with errors related to dependencies, assets, or configuration.</p>
+          <p><strong>Solution:</strong> Try these steps:</p>
+          <ul>
+            <li>Run <code>flutter clean</code> to remove any cached files that could be causing the issue.</li>
+            <li>Make sure all dependencies in <code>pubspec.yaml</code> are correct and up to date.</li>
+            <li>Check if all required assets are properly referenced in <code>pubspec.yaml</code> file.</li>
+            <li>If the issue is related to iOS, ensure your Xcode project is properly configured (e.g., matching iOS versions,
+              signing certificates).</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('node-env')">
+        <h3>7. Node.js Backend: Environment Variables Not Loaded <span id="arrow8" class="arrow">&#9654;</span></h3>
+        <div id="node-env" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Environment variables are not being loaded correctly (e.g., database URL, API keys).</p>
+          <p><strong>Solution:</strong> Check the following:</p>
+          <ul>
+            <li>Ensure you have installed <code>dotenv</code> package: <code>npm install dotenv</code>.</li>
+            <li>Make sure to add <code>require('dotenv').config();</code> at the top of your main app file.</li>
+            <li>Check if the environment variables are properly defined in your <code>.env</code> file.</li>
+            <li>Restart your server to apply the changes from the <code>.env</code> file.</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="expandable" onclick="toggleContent('flutter-gradle')">
+        <h3>8. Flutter App: Gradle Build Fails <span id="arrow1" class="arrow">&#9654;</span></h3>
+        <div id="flutter-gradle" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Gradle build fails with errors like "Gradle task assembleDebug failed."</p>
+          <p><strong>Solution:</strong> Try these steps:</p>
+          <ul>
+            <li>Run <code>flutter clean</code> to clear cached data.</li>
+            <li>Ensure you are using compatible versions of Gradle and Android Studio.</li>
+            <li>Check the <code>android/build.gradle</code> file for any incorrect configurations.</li>
+            <li>Update your Gradle wrapper: <code>./gradlew wrapper --gradle-version 6.x</code>.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('flutter-java')">
+        <h3>9. Flutter App: Java Compilation Errors <span id="arrow2" class="arrow">&#9654;</span></h3>
+        <div id="flutter-java" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Java compilation errors when building Flutter app for Android.</p>
+          <p><strong>Solution:</strong> Ensure that:</p>
+          <ul>
+            <li>Your Java JDK version is compatible with your Flutter version (e.g., JDK 8).</li>
+            <li>Ensure your <code>JAVA_HOME</code> environment variable is correctly set to the JDK location.</li>
+            <li>Update dependencies in your <code>build.gradle</code> file to the latest stable versions.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('flutter-sha1')">
+        <h3>10. Flutter App: SHA1 Key Not Found <span id="arrow3" class="arrow">&#9654;</span></h3>
+        <div id="flutter-sha1" class="content" style="display:none;">
+          <p><strong>Issue:</strong> "SHA1 key not found" or issues with Firebase authentication on Android.</p>
+          <p><strong>Solution:</strong> Generate and add the SHA1 key:</p>
+          <ul>
+            <li>Run <code>keytool -list -v -keystore <your_keystore_file> -alias <your_alias></code> to get the SHA1 key.</li>
+            <li>Add the SHA1 key to the Firebase console for Android authentication.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('flutter-run-debug')">
+        <h3>11. Flutter App: Debugging Errors <span id="arrow4" class="arrow">&#9654;</span></h3>
+        <div id="flutter-run-debug" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Errors when running <code>flutter run --debug</code> on Android emulator or device.</p>
+          <p><strong>Solution:</strong> Try these steps:</p>
+          <ul>
+            <li>Check for issues with your Android emulator (e.g., insufficient memory).</li>
+            <li>Ensure that your Flutter and Android Studio versions are up-to-date.</li>
+            <li>Run <code>flutter doctor</code> to check for missing dependencies.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('flutter-androidx')">
+        <h3>12. Flutter App: AndroidX Migration Issues <span id="arrow5" class="arrow">&#9654;</span></h3>
+        <div id="flutter-androidx" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Issues when migrating to AndroidX (e.g., "Flutter requires AndroidX").</p>
+          <p><strong>Solution:</strong> Ensure all dependencies support AndroidX:</p>
+          <ul>
+            <li>Check <code>android/gradle.properties</code> for:</li>
+            <pre>android.useAndroidX=true
+      android.enableJetifier=true</pre>
+            <li>Run <code>flutter upgrade</code> and update dependencies to AndroidX-compatible versions.</li>
+          </ul>
+        </div>
+      </div>
+    
+      
+      <div class="expandable" onclick="toggleContent('flutter-api')">
+        <h3>12. Flutter App: API Request Issues <span id="arrow7" class="arrow">&#9654;</span></h3>
+        <div id="flutter-api" class="content" style="display:none;">
+          <p><strong>Issue:</strong> API requests are failing or timing out in the Flutter app.</p>
+          <p><strong>Solution:</strong> Check the following:</p>
+          <ul>
+            <li>Ensure the backend API is up and running.</li>
+            <li>Check for CORS issues on the server side.</li>
+            <li>Ensure that the correct API URL is used in the Flutter app and is reachable from the device.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('flutter-asset')">
+        <h3>13. Flutter App: Missing Assets <span id="arrow8" class="arrow">&#9654;</span></h3>
+        <div id="flutter-asset" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Assets like images or fonts are not loading in the Flutter app.</p>
+          <p><strong>Solution:</strong> Ensure that:</p>
+          <ul>
+            <li>All assets are listed correctly in <code>pubspec.yaml</code>.</li>
+            <li>Run <code>flutter pub get</code> to fetch assets.</li>
+            <li>Check that file paths are correct and match the project structure.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('flutter-dependency-issues')">
+        <h3>14. Flutter App: Dependency Version Conflicts <span id="arrow14" class="arrow">&#9654;</span></h3>
+        <div id="flutter-dependency-issues" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Errors related to dependency versions in <code>pubspec.yaml</code>.</p>
+          <p><strong>Solution:</strong> Try the following:</p>
+          <ul>
+            <li>Run <code>flutter pub get</code> to fetch dependencies.</li>
+            <li>Use <code>flutter pub upgrade</code> to update all dependencies.</li>
+            <li>If conflicts persist, manually specify compatible versions of dependencies in <code>pubspec.yaml</code>.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('flutter-android-version')">
+        <h3>15. Flutter App: Incorrect Android Versioning <span id="arrow15" class="arrow">&#9654;</span></h3>
+        <div id="flutter-android-version" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Issues with incorrect Android version codes or names in <code>build.gradle</code>.</p>
+          <p><strong>Solution:</strong> Check the following:</p>
+          <ul>
+            <li>Ensure the version code and version name are updated in <code>android/app/build.gradle</code>.</li>
+            <li>Check for compatibility with Android API levels.</li>
+            <li>Ensure that <code>minSdkVersion</code>, <code>targetSdkVersion</code>, and <code>compileSdkVersion</code> are
+              correctly set.</li>
+          </ul>
+        </div>
+      </div>
+  
+      
+      <div class="expandable" onclick="toggleContent('node-express-crash')">
+        <h3>16. Node.js Backend: Express App Crashes <span id="arrow18" class="arrow">&#9654;</span></h3>
+        <div id="node-express-crash" class="content" style="display:none;">
+          <p><strong>Issue:</strong> The Express app crashes unexpectedly.</p>
+          <p><strong>Solution:</strong> Follow these troubleshooting steps:</p>
+          <ul>
+            <li>Check for syntax errors in the Express app code.</li>
+            <li>Ensure that all required environment variables are properly set in the <code>.env</code> file.</li>
+            <li>Check the logs for any specific error messages or stack traces to identify the root cause.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('node-server-502')">
+        <h3>17. Node.js Backend: 502 Bad Gateway Error <span id="arrow19" class="arrow">&#9654;</span></h3>
+        <div id="node-server-502" class="content" style="display:none;">
+          <p><strong>Issue:</strong> A 502 Bad Gateway error occurs when accessing the Node.js backend.</p>
+          <p><strong>Solution:</strong> Try the following:</p>
+          <ul>
+            <li>Ensure the backend server is running and reachable.</li>
+            <li>Check for misconfigurations in reverse proxy or load balancer (if using Nginx or similar).</li>
+            <li>Verify that the backend server is not overwhelmed by requests.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="expandable" onclick="toggleContent('node-dependency-issues')">
+        <h3>18. Node.js Backend: Dependency Issues <span id="arrow20" class="arrow">&#9654;</span></h3>
+        <div id="node-dependency-issues" class="content" style="display:none;">
+          <p><strong>Issue:</strong> Errors related to missing or incompatible Node.js dependencies.</p>
+          <p><strong>Solution:</strong> Resolve the issues by:</p>
+          <ul>
+            <li>Running <code>npm install</code> to install missing dependencies.</li>
+            <li>Check the <code>package.json</code> for any incorrect versions or missing packages.</li>
+            <li>If the issue persists, try deleting <code>node_modules</code> and running <code>npm install</code> again.</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <p><strong>Note:</strong> If you're experiencing issues that are not listed here, check the official Flutter and
+        Node.js documentation, or look through GitHub issues for similar problems.</p>
+      </section>
+
+
+    <script>
+      function toggleContent(id) {
+        var content = document.getElementById(id);
+        var arrow = document.getElementById('arrow' + id.slice(-1)); // Get the arrow based on the id's last character
+        if (content.style.display === "none") {
+          content.style.display = "block";
+          arrow.innerHTML = "&#9660;"; // Down arrow
+        } else {
+          content.style.display = "none";
+          arrow.innerHTML = "&#9654;"; // Right arrow
+        }
+      }
+    </script>
+    
+    <style>
+      .expandable {
+        cursor: pointer;
+        margin-bottom: 15px;
+      }
+    
+      .arrow {
+        margin-left: 10px;
+        font-size: 18px;
+      }
+    
+      .content {
+        margin-top: 10px;
+        padding-left: 20px;
+      }
+    </style>
+
+<hr class="divider">
+
+<section id="why_hire_me">
+  <h2>Why Hire Me</h2>
+  <p>
+    I’m a highly experienced <strong>Full-Stack Mobile Developer</strong> specializing in <strong>Flutter</strong> and
+    <strong>Node.js</strong>, capable of delivering complete, scalable, and production-ready solutions. Hiring me means
+    you’re getting a dedicated professional who can take your project from idea to launch—without the need for multiple
+    developers.
+  </p>
+
+  <h3>What I Offer:</h3>
+  <ul>
+    <li><strong>Complete App Development:</strong> UI/UX design, Flutter app development (Android, iOS, Web), RESTful
+      API & Socket.IO backend with Node.js, and database design (MongoDB, Firebase, etc.).</li>
+    <li><strong>Single Point of Contact:</strong> No communication gap between frontend and backend. I ensure end-to-end
+      alignment of features and performance.</li>
+    <li><strong>Budget-Friendly:</strong> Cut costs by avoiding multiple hires. I provide full-stack services under one
+      roof.</li>
+    <li><strong>Extra Feature Integration:</strong> I can implement advanced features like real-time messaging,
+      voice/video calling (WebRTC/100ms), location-based services, in-app purchases, and more.</li>
+    <li><strong>Deployment Support:</strong> I assist in deploying your backend to services like Railway, Render, or
+      VPS, and hosting frontend on Firebase, Vercel, or Netlify.</li>
+    <li><strong>Publishing & Store Setup:</strong> I help with Play Store and App Store deployment including signing,
+      AAB/APK builds, TestFlight, and compliance.</li>
+    <li><strong>Cross-Platform Support:</strong> Build once, run anywhere—mobile, web, and even Windows/macOS desktop
+      apps with Flutter.</li>
+    <li><strong>Secure Code:</strong> I follow best practices for API security, authentication, and data protection.
+    </li>
+    <li><strong>Clean Documentation:</strong> I provide structured, commented, and well-documented code for easy future
+      updates.</li>
+    <li><strong>Post-Launch Support:</strong> Available for future improvements, maintenance, and troubleshooting even
+      after delivery.</li>
+  </ul>
+
+  <h3>My Commitment:</h3>
+  <p>
+    I don’t just build apps—I build solutions that solve problems and support business goals. I’m committed to
+    delivering on time, maintaining code quality, and offering long-term value for your investment.
+  </p>
+
+  <p>
+    Let’s collaborate to bring your idea to life. You’ll get a reliable developer, honest feedback, scalable
+    architecture, and full transparency throughout the process.
+  </p>
+</section>
+
+<div class="contact-buttons">
+  <a href="https://wa.link/xnw98v" target="_blank" class="animated-btn">
+    📱 Contact on WhatsApp
+  </a>
+  <a href="mailto:srabonray.dev@gmail.com" class="animated-btn">
+    ✉️ Contact via Email
+  </a>
+  <a href="https://calendly.com/srabon-bdcalling/30min" target="_blank" class="animated-btn">
+    🗓 Schedule a Meeting
+  </a>
+</div>
+
+
+<style>
+  .contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .animated-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #845ef7, #5c7cfa);
+    background-size: 300% 300%;
+    animation: gradientBG 6s ease infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .animated-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
+
+
+    
+<hr class="divider">
+        <section id="idocs_support">
+          <h2>Support</h2>
+          <p>If this documentation doesn't answer your questions, So, Please send us Email via <a class="btn btn-primary" target="_blank" href="">Item Support Page</a></p>
+		  <p> We are located in GMT +5:30 time zone and we answer all questions within 12-24 hours in weekdays. In some rare cases the waiting time can be to 48 hours. (except holiday seasons which might take longer).</p>
+          <div class="alert alert-warning mb-4"><span class="badge badge-danger text-uppercase">Note:</span> While we aim to provide the best support possible, please keep in mind that it only extends to verified buyers and only to issues related to our template like bugs and errors. Custom modifications or third party module implementations are not included.</div>
+		  <h4>Don’t forget to Rate this template
+			<i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i>
+		  </h4>
+		  <div class="alert alert-success">
+            Please Add your Review (Opinion) for Our template. It would be a great support for us.<br>
+            Go to your <strong>Themeforest Profile</strong> > <strong>Downloads Tab</strong> > & then You can Rate & Review for our template.<br>
+			Thank You.
+          </div>
+        </section>
+		
+		<hr class="divider"> 
+        <section id="idocs_templates">
+          <h2>More Templates</h2>
+          <p class="lead">Checkout Our Below Premium Templates</p>
+		  
+		  <div class="row">
+		  <div class="col-4 my-3 text-center">
+			<a target="_blank" href="https://wa.link/xnw98v"><img class="img-fluid border" src="" alt="Webview - Advanced - Unique Feature - Modern Design WebView with Admin App | Real-Time Configurable / Customizable WebView">
+			<h6 class="pt-2">Webview - Advanced - Unique Feature - Modern Design WebView with Admin App | Real-Time Configurable / Customizable WebView</h6></a>
+		  </div>
+		  </div>
+		  
+		  <p class="text-center"><a class="btn btn-lg btn-primary my-4" target="_blank" href="">Our Portfolio</a></p>
+          
+        </section>
+		
+		<hr class="divider">
+		
+        <!-- Changelog
+		============================ -->
+		
+        <section id="idocs_changelog">
+          <h2>Changelog</h2>
+          <p class="text-4">See what's new added, changed, fixed, improved or updated in the latest versions. </p>
+		  <p class="alert alert-info mb-5"> For Future Updates Follow Us <a target="_blank" href="">@themeforest</a></p>
+          
+		  <!-- <h3 id="v1-1">Version 1.1 <small class="text-muted">(15 February, 2024)</small></h3>
+          <ul class="changelog">
+            <li><span class="badge badge-success">Added</span> Your information here for added new feature</li>
+			<li><span class="badge badge-danger">Fixed</span> Some minor bugs for responsive</li>
+			<li><span class="badge badge-info">Updated</span> Improvements in code style</li>
+          </ul> -->
+		  <hr class="divider">
+          <h3 id="v1-0">Version 1.0 <small class="text-muted">(15 May, 2025)</small></h3>
+          <p>Initial Release</p>
+        </section>        
+        
+      </div>
+    </div>
+	
+  </div>
+  <!-- Content end --> 
+  
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="" target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="" target="_blank" title="" data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2025 <a href="">MeetLove </a>. All Rights Reserved.</p>
+	  <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href=""> Guardian Map </a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+  
+</div>
+
+
+<!-- Document Wrapper end --> 
+
+<!-- Back To Top --> 
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+
+<!-- JavaScript
+============================ -->
+<script src="assets/vendor/jquery/jquery.min.js"></script> 
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Highlight JS -->
+<script src="assets/vendor/highlight.js/highlight.min.js"></script> 
+<!-- Easing --> 
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
+<!-- Magnific Popup --> 
+<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<!-- Custom Script -->
+<script src="assets/js/theme.js"></script>
+</body>
+</html>
