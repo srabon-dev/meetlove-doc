@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 <link href="assets/images/logo.png" rel="icon" />
-<title>Guardian Map | MeetLove Dating Complete App, Dashboard And Node.js Backend</title>
+<title>Guardian Map | MeetLove Pro Dating Complete App, Dashboard And Node.js Backend</title>
 <meta name="description" content="MeetLove - Flutter Dating App (TikTok Style, Chat, Random Live, Partner Booking) + Admin & Backend">
 <meta name="author" content="harnishdesign.net">
 
@@ -128,7 +128,7 @@
 		============================ -->
         <section id="idocs_start">
         <h1>MeetLove Documentation</h1>
-        <h4>MeetLove - Flutter Dating App (TikTok Style, Chat, Random Live, Partner Booking) + Admin & Backend</h4>
+        <h4>MeetLove Pro - Flutter Dating App (TikTok Style, Partner Booking) + Admin & Backend</h4>
         <p class="lead">Thank you so much for purchasing our item from Codecanyon.</p>
 		<hr>
 		<div class="row">
@@ -140,8 +140,8 @@
 			</div>
 			<div class="col-sm-6 col-lg-4">
 				<ul class="list-unstyled">
-					<li><strong class="font-weight-700">Created:</strong> 5 May, 2025</li>
-					<li><strong>Update:</strong> 5 May, 2025</li>
+					<li><strong class="font-weight-700">Created:</strong> 20 June, 2025</li>
+					<li><strong>Update:</strong> 20 June, 2025</li>
 				</ul>
 			</div>
 		</div>
@@ -172,7 +172,7 @@
             </li>
             <li><strong>Stripe Account</strong> - Stripe is used for payment processing. You need to create an account on <a href="https://stripe.com/" target="_blank">Stripe</a>.</li>
             <li><strong>Google Maps API</strong> - For location services, you need to create a Google Maps API key. Follow the setup on <a href="https://cloud.google.com/maps-platform" target="_blank">Google Maps Platform</a>.</li>
-            <li><strong>ZEGOCLOUD Account</strong> - ZEGOCLOUD is used for random live streaming. Sign up for an account at <a href="https://www.zegocloud.com/" target="_blank">ZEGOCLOUD</a> and get your AppID and AppSign.</li>
+            <!--<li><strong>ZEGOCLOUD Account</strong> - ZEGOCLOUD is used for random live streaming. Sign up for an account at <a href="https://www.zegocloud.com/" target="_blank">ZEGOCLOUD</a> and get your AppID and AppSign.</li>-->
             <li><strong>GitHub Account</strong> - For version control and code management, set up a GitHub account at <a href="https://github.com/" target="_blank">GitHub</a>.</li>
             <li><strong>MongoDB Atlas</strong> - For managing the database, create a MongoDB Atlas account at <a href="https://www.mongodb.com/cloud/atlas" target="_blank">MongoDB Atlas</a> and set up a cluster.</li>
             <li><strong>Railway Account</strong> - Railway is used to deploy the backend server. Create an account on <a href="https://railway.app/" target="_blank">Railway</a>.</li>
@@ -186,14 +186,14 @@
           </section>
                 
         <section id="idocs_project">
-          <h3>Project Setup for MeetLove</h3>
+          <h3>Project Setup for MeetLove Pro</h3>
           <p><strong>Setting Up the Project:</strong>  
             Follow these steps after setting up all your accounts:
             <ol>
               <li>Open Project</li>
               <li>Integrate the Stripe API for payment handling in the backend.</li>
               <li>Set up the Google Maps API key in the app for location and directions.</li>
-              <li>Integrate ZEGOCLOUD SDK into the Flutter app to enable random live streaming functionality.</li>
+              <!--<li>Integrate ZEGOCLOUD SDK into the Flutter app to enable random live streaming functionality.</li>-->
               <li>Connect MongoDB Atlas for database storage in the backend.</li>
               <li>Deploy the backend server on Railway.</li>
             </ol>
@@ -319,8 +319,8 @@
                 <pre>
           BACKEND_URL = &lt;your_backend_url&gt;
           GOOGLE_MAP_API_KEY = &lt;your_google_map_api_key&gt;
-          ZEGOCLOUD_LIVE_APP_ID = &lt;your_zegocloud_app_id&gt;
-          ZEGOCLOUD_LIVE_APP_SIGN = &lt;your_zegocloud_app_sign&gt;
+          <!--          ZEGOCLOUD_LIVE_APP_ID = &lt;your_zegocloud_app_id&gt;
+          ZEGOCLOUD_LIVE_APP_SIGN = &lt;your_zegocloud_app_sign&gt;-->
                 </pre>
               </li>
             </ul>
@@ -351,6 +351,7 @@
             <pre>flutter run -d chrome</pre>
           
             <li><strong>Test the admin panel</strong> in the browser to ensure everything is functioning as expected.</li>
+            <li>Build Flutter Web: <strong>flutter build web --no-tree-shake-icons</strong></li>
           
             <li><strong>Deploy your admin panel:</strong> After testing, you can deploy your Flutter web admin to any static
               hosting service like Firebase Hosting, Cloudflare Pages, or Vercel.</li>
@@ -536,7 +537,7 @@
        <li>Once the API key is generated, restrict it as needed (e.g., limit usage to your app’s package name or HTTP referrers).</li>
        <li>In your Flutter app, add the Google Maps API key in the following files:</li>
        <ul>
-         <li><strong>lib/utils/app_const/app_const.dart</strong>:
+         <li><strong>lib/app/constants/app_constants.dart</strong>:
            <pre>
              // app_const.dart
              String googleMapAPI = 'YOUR_GOOGLE_MAPS_API_KEY';  <!-- Replace with your actual API key -->
@@ -641,7 +642,7 @@
 
       <p><strong style="color: red;">Your GitHub repositories are now set up, and your project is uploaded to GitHub!</strong></p>
 
-      <h3>5. ZEGOCLOUD Account Setup (For Random Video Call Feature)</h3>
+    <!--<h3>5. ZEGOCLOUD Account Setup (For Random Video Call Feature)</h3>
       <p>ZEGOCLOUD is used for the random one-on-one video call feature in MeetLove, allowing users to connect with each other via video calls. Here's how to set it up:</p>
       <ul>
         <li>Go to <a href="https://www.zegocloud.com/" target="_blank">ZEGOCLOUD</a> and sign up for a free account.</li>
@@ -660,15 +661,15 @@
         <li>Copy the <strong>AppID</strong> and <strong>AppSign</strong> values from the ZEGOCLOUD Dashboard.</li>
         <li>In your Flutter project, you will need to set these values in your app's constants. Open the <strong>lib/utils/app_const/app_const.dart</strong> file and add the following lines:</li>
         <pre>
-          static const int liveAppId = YOUR_APP_ID;  <!-- Replace with your ZEGOCLOUD AppID -->
-          static const String liveAppSign = "YOUR_APP_SIGN";  <!-- Replace with your ZEGOCLOUD AppSign -->
+          static const int liveAppId = YOUR_APP_ID;
+          static const String liveAppSign = "YOUR_APP_SIGN";
         </pre>
         <li>After adding the AppID and AppSign to the app_const.dart file, you can now integrate the ZEGOCLOUD SDK into your Flutter app for the one-on-one video call feature.</li>
         <li>To integrate the ZEGOCLOUD SDK, follow the official documentation from ZEGOCLOUD to add the necessary dependencies and configure the SDK in your Flutter project:</li>
           <ul>
             <li>Set up the video call feature in your app as per ZEGOCLOUD's documentation.</li>
           </ul>
-      </ul>
+      </ul>-->
     </section>
     
     <!-- HTML Structure ============================ -->
@@ -765,27 +766,61 @@
     </section>
     
     <!-- HTML Structure ============================ -->
+    <!-- HTML Structure ============================ -->
     <section id="idocs_html_cloudnary">
       <h3>6. Cloudinary Account Setup (For Media Upload)</h3>
       <p>Cloudinary is used for storing and managing images and videos for your app. Here’s how to set it up:</p>
+    
       <ul>
-        <li><strong>Go to Cloudinary:</strong> Visit <a href="https://cloudinary.com/" target="_blank">Cloudinary</a> and sign up for an account.</li>
-        <li><strong>Get Your API Credentials:</strong> After signing up and logging in, go to the <strong>Account Settings</strong> section in the Cloudinary dashboard.</li>
-        <li><strong>Find the API Key, API Secret, and Cloud Name:</strong> You will see your Cloudinary API credentials under the <strong>API Keys</strong> section. Copy the following values:</li>
+        <li><strong>Go to Cloudinary:</strong> Visit <a href="https://cloudinary.com/" target="_blank">Cloudinary</a> and
+          sign up for an account.</li>
+    
+        <li><strong>Get Your API Credentials:</strong> After signing up and logging in, go to the <strong>Account
+            Settings</strong> section in the Cloudinary dashboard.</li>
+    
+        <li><strong>Find the API Key, API Secret, and Cloud Name:</strong> You will see your Cloudinary API credentials
+          under the <strong>API Keys</strong> section. Copy the following values:</li>
         <ul>
           <li><strong>Cloud Name:</strong> bbwoifkyf</li>
           <li><strong>API Key:</strong> 5665464564</li>
           <li><strong>API Secret:</strong> yrtyrtyrtyrty</li>
         </ul>
-        <li><strong>Add the Credentials to Your .env File:</strong> In your project, create or modify the <strong>.env</strong> file to store the Cloudinary credentials securely. Add the following lines:</li>
+    
+        <li><strong>Add the Credentials to Your .env File:</strong> In your project, create or modify the
+          <strong>.env</strong> file to store the Cloudinary credentials securely:</li>
         <pre>
-          CLOUDINARY_CLOUD_NAME1=bbwoifkyf
-          CLOUDINARY_API_KEY1=67725656469983226
-          CLOUDINARY_API_SECRET1=AHo65yty5yetUHnc6TRxcKfchN0y0
+    CLOUDINARY_CLOUD_NAME=bbwoifkyf
+    CLOUDINARY_API_KEY=5665464564
+    CLOUDINARY_API_SECRET=yrtyrtyrtyrty
         </pre>
-        <li><strong>Important:</strong> Replace the credentials with your actual values from the Cloudinary dashboard. This step ensures that your app can securely access Cloudinary services.</li>
+    
+        <hr>
+    
+        <h4>📂 Create an Unsigned Upload Preset (No Auth Required)</h4>
+        <li>Navigate to your Cloudinary dashboard → Settings → Upload → <strong>Upload Presets</strong></li>
+        <li>Click <strong>"Add upload preset"</strong></li>
+        <li>Set the following fields:</li>
+        <ul>
+          <li><strong>Name:</strong> post_unsigned_upload</li>
+          <li><strong>Signing Mode:</strong> Unsigned</li>
+          <li><strong>Folder:</strong> video_posts (or any folder name you want)</li>
+          <li><strong>Allowed Formats:</strong> mp4, mov, jpg, png, etc.</li>
+        </ul>
+        <li>Click <strong>"Save"</strong></li>
+    
+        <hr>
+    
+        <h4>🔧 Flutter Integration</h4>
+        <li>Update your constants in <code>AppConstants.dart</code>:</li>
+        <pre>
+    static const String cloudinaryCloudName = "bbwoifkyf";
+    static const String cloudinaryPostUnsignedName = "post_unsigned_upload";
+    static const String cloudinaryPostFolderName = "video_posts";
+        </pre>
+        <li><strong>Note:</strong> No API key or secret is needed in the client for unsigned uploads.</li>
       </ul>
     </section>
+
     
     <!-- HTML Structure ============================ -->
     <section id="idocs_html_app_upload">
