@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="assets/images/logo.png" rel="icon" />
+<title>MeetLove 1.1 Update | Complete Documentation Update</title>
+<meta name="description" content="MeetLove 1.1 Update - Complete documentation for new features and changes">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+<!-- Document Wrapper -->
+<div id="main-wrapper">
+  
+  <!-- Header -->
+  <header id="header" class="sticky-top"> 
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <a class="logo ml-md-3" href="index.html" title="MeetLove">
+          <img src="assets/images/logo.png" height="50" width="50" alt="MeetLove"/> 
+          <span class="text-2 ml-2">MeetLove 1.1 Update</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Content -->
+  <div id="content" role="main">
+    
+    <!-- Sidebar Navigation -->
+    <div class="idocs-navigation bg-light">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#idocs_start">Version 1.1 Update</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#whats_new">What's New</a></li>
+            <li class="nav-item"><a class="nav-link" href="#subscription_feature">Subscription Feature</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tourplan">TourPlan Feature</a></li>
+            <li class="nav-item"><a class="nav-link" href="#admob_integration">AdMob Integration</a></li>
+            <li class="nav-item"><a class="nav-link" href="#removed_features">Removed Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#user_discovery">Enhanced User Discovery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ui_updates">UI/UX Updates</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sendgrid_setup">SendGrid Setup</a></li>
+            <li class="nav-item"><a class="nav-link" href="#location_features">Location Features</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Docs Content -->
+    <div class="idocs-content">
+      <div class="container">
+        
+        <!-- Getting Started -->
+        <section id="idocs_start">
+          <h1>MeetLove 1.1 Update</h1>
+          <p class="lead">Complete documentation for the new features and changes in MeetLove 1.1</p>
+          <p>This document covers all the new features, improvements, and changes introduced in MeetLove version 1.1. Please refer to the relevant sections for detailed information about each update.</p>
+          <div class="alert alert-info">
+            <strong>Note:</strong> This is an addendum to the main documentation. Please ensure you've reviewed the base documentation before proceeding with these updates.
+          </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- What's New -->
+        <section id="whats_new">
+          <h2>What's New in 1.1 - Simple Guide for Non-Developers</h2>
+          <div class="alert alert-info">
+            <i class="fas fa-info-circle"></i> <strong>No Coding Required!</strong> This guide will walk you through setting up MeetLove 1.1 step by step.
+          </div>
+          
+          <h3>📱 App Overview</h3>
+          <p>MeetLove 1.1 is now better than ever with these exciting new features:</p>
+          
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-crown"></i></div>
+                <h4>Premium Subscriptions</h4>
+                <p>Earn money with free and premium memberships</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <h4>Tour Plans</h4>
+                <p>Users can create and join local events</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-ad"></i></div>
+                <h4>AdMob Ads</h4>
+                <p>Earn from ads in your app</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-search"></i></div>
+                <h4>Better Search</h4>
+                <p>Users can find matches more easily</p>
+              </div>
+            </div>
+          </div>
+          
+          <h3>📋 Quick Start Guide</h3>
+          <p>Follow these simple steps to get your app running:</p>
+          
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h5>Get the App Files</h5>
+              <p>You should have received the app files after purchase. If not, please contact support.</p>
+              <p>You'll find these main folders:
+                <ul>
+                  <li><strong>meetlove_app</strong> - The main app for users</li>
+                  <li><strong>admin_panel</strong> - Web panel to manage your app</li>
+                  <li><strong>backend</strong> - The server code (already set up for you)</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h5>Set Up Your Server</h5>
+              <p>We'll use Railway.app (free tier available) to host your app's server:</p>
+              <ol>
+                <li>Go to <a href="https://railway.app" target="_blank">Railway.app</a> and sign up</li>
+                <li>Click "New Project" and select "Deploy from GitHub"</li>
+                <li>Choose the <code>backend</code> folder from your files</li>
+                <li>Railway will automatically set up your server</li>
+              </ol>
+              <div class="alert alert-warning">
+                <i class="fas fa-exclamation-triangle"></i> Save the website URL that Railway gives you - you'll need it later!
+              </div>
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h5>Set Up Firebase (For User Accounts)</h5>
+              <ol>
+                <li>Go to <a href="https://firebase.google.com" target="_blank">Firebase Console</a></li>
+                <li>Click "Add project" and follow the steps</li>
+                <li>Click "Add app" and select Android</li>
+                <li>Use your app's package name (example: com.yourcompany.meetlove)</li>
+                <li>Download the <code>google-services.json</code> file</li>
+                <li>Place this file in: <code>meetlove_app/android/app/</code></li>
+              </ol>
+              <div class="alert alert-info">
+                <i class="fas fa-lightbulb"></i> Need help? Watch our <a href="#" target="_blank">video guide</a> on setting up Firebase.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Subscription Feature -->
+        <section id="subscription_feature">
+          <h2>💰 Premium Subscriptions with RevenueCat</h2>
+          <p>Earn money with in-app subscriptions using RevenueCat. No coding required!</p>
+          
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Set Up RevenueCat</h4>
+              <ol>
+                <li>Go to <a href="https://www.revenuecat.com" target="_blank">RevenueCat.com</a> and sign up</li>
+                <li>Create a new project</li>
+                <li>Add your app (both iOS and Android)</li>
+                <li>Go to <strong>Products</strong> and create these subscription products:
+                  <ul>
+                    <li>Monthly Subscription</li>
+                    <li>Yearly Subscription (optional)</li>
+                  </ul>
+                </li>
+              </ol>
+              
+              <h5>Environment Variables to Set</h5>
+              <p>Add these to your <code>.env</code> file in the backend:</p>
+              <pre>REVENUECAT_API_KEY=your_revenuecat_api_key</pre>
+              
+              <div class="alert alert-info">
+                <i class="fas fa-lightbulb"></i> The app is pre-configured to work with RevenueCat. Just add your API key!
+              </div>
+              
+              <a href="https://docs.revenuecat.com/docs" target="_blank" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Need Help? Contact Support
+              </a>
+            </div>
+          </div>
+          
+          <h4>Premium vs Free Features</h4>
+          <table class="comparison-table">
+            <tr>
+              <th>Feature</th>
+              <th>Free</th>
+              <th>Premium</th>
+            </tr>
+            <tr>
+              <td>Basic Profile</td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Daily Swipes</td>
+              <td>100</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>See Who Liked You</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td>Advanced Filters</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+          </table>
+
+          <h4>Implementation Details</h4>
+          <p>The subscription system uses the following package:</p>
+          <pre><code>com.proflove.app.Monthly</code></pre>
+          
+          <h5>Backend Changes</h5>
+          <ol>
+            <li>Added subscription model to track user plans</li>
+            <li>Created API endpoints for subscription management</li>
+            <li>Integrated with payment gateway for premium subscriptions</li>
+            <li>Added middleware to check subscription status</li>
+          </ol>
+
+          <h5>Frontend Changes</h5>
+          <ol>
+            <li>Added subscription screen with plan comparison</li>
+            <li>Integrated in-app purchase for premium features</li>
+            <li>Added subscription status in user profile</li>
+            <li>Updated UI to reflect subscription status</li>
+          </ol>
+        </section>
+
+        <hr class="divider">
+
+        <!-- TourPlan Feature -->
+        <section id="tourplan">
+          <h2>🎯 TourPlan Feature</h2>
+          <p>Let users create and join local events and tours. No setup required - it works automatically!</p>
+          
+          <div class="feature-box">
+            <h4>What Users Can Do:</h4>
+            <ul>
+              <li>Create public or private tour plans</li>
+              <li>Set date, time, and location</li>
+              <li>Add photos and descriptions</li>
+              <li>Limit number of participants</li>
+              <li>Approve/decline join requests</li>
+              <li>Chat with tour participants</li>
+            </ul>
+            
+            <div class="alert alert-info">
+              <i class="fas fa-cog"></i> <strong>Automatic Setup:</strong> The TourPlan feature is already configured and ready to use. No additional setup needed!
+            </div>
+          </div>
+
+          <h4>Implementation Details</h4>
+          <h5>Database Schema</h5>
+          <pre><code>// TourPlan Model
+{
+  _id: ObjectId,
+  title: String,
+  description: String,
+  creator: { type: Schema.Types.ObjectId, ref: 'User' },
+  location: {
+    type: { type: String, default: 'Point' },
+    coordinates: [Number]
+  },
+  startDate: Date,
+  endDate: Date,
+  maxParticipants: Number,
+  participants: [{
+    user: { type: Schema.Types.ObjectId, ref: 'User' },
+    status: { type: String, enum: ['pending', 'accepted', 'rejected'], default: 'pending' },
+    joinedAt: { type: Date, default: Date.now }
+  }],
+  status: { type: String, enum: ['upcoming', 'ongoing', 'completed', 'cancelled'], default: 'upcoming' },
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now }
+}</code></pre>
+
+          <h5>API Endpoints</h5>
+          <ul>
+            <li><code>POST /api/tours</code> - Create a new tour</li>
+            <li><code>GET /api/tours</code> - Get all tours (with filters)</li>
+            <li><code>GET /api/tours/:id</code> - Get tour details</li>
+            <li><code>POST /api/tours/:id/join</code> - Request to join a tour</li>
+            <li><code>PUT /api/tours/:tourId/participants/:userId</code> - Update participant status</li>
+            <li><code>DELETE /api/tours/:id</code> - Cancel a tour</li>
+          </ul>
+        </section>
+
+        <hr class="divider">
+
+        <!-- AdMob Integration -->
+        <section id="admob_integration">
+          <h2>🤑 Make Money with Ads (AdMob)</h2>
+          <p>Earn money by showing ads in your app. Follow these simple steps:</p>
+          
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h5>Set Up Google AdMob</h5>
+              <ol>
+                <li>Go to <a href="https://admob.google.com" target="_blank">AdMob</a> and sign in with your Google account</li>
+                <li>Click "Add app" and select your app from the store (or create a placeholder)</li>
+                <li>After adding your app, create these ad units:
+                  <ul>
+                    <li><strong>Banner Ad</strong> (for the bottom of screens)</li>
+                    <li><strong>Interstitial Ad</strong> (full-screen ads that show between screens)</li>
+                    <li><strong>Rewarded Ad</strong> (users watch ads for bonuses)</li>
+                  </ul>
+                </li>
+                <li>For each ad unit, copy the Ad Unit ID (it looks like ca-app-pub-xxxxxxxxxxxxxxxx/yyyyyyyyyy)</li>
+              </ol>
+              
+              <h5>Update App with Your Ad IDs</h5>
+              <p>Open the file: <code>meetlove_app/lib/config/ads_config.dart</code></p>
+              <p>Replace the placeholder text with your AdMob IDs:</p>
+              <pre><code>class AdConfig {
+  static const String appId = 'YOUR_ADMOB_APP_ID';
+  static const String bannerAdId = 'YOUR_BANNER_AD_ID';
+  static const String interstitialAdId = 'YOUR_INTERSTITIAL_AD_ID';
+  static const String rewardedAdId = 'YOUR_REWARDED_AD_ID';
+}</code></pre>
+              
+              <div class="alert alert-info">
+                <i class="fas fa-lightbulb"></i> The app is already set up to show ads in the best places for user experience and maximum earnings.
+              </div>
+            </div>
+          </div>
+
+          <h5>Android Setup</h5>
+          <p>Add to <code>android/app/src/main/AndroidManifest.xml</code>:</p>
+          <pre><code><meta-data
+    android:name="com.google.android.gms.ads.APPLICATION_ID"
+    android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/></code></pre>
+
+          <h5>iOS Setup</h5>
+          <p>Add to <code>ios/Runner/Info.plist</code>:</p>
+          <pre><code><key>GADApplicationIdentifier</key>
+<string>ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy</string></code></pre>
+
+          <h5>Flutter Code</h5>
+          <p>Initialize AdMob in your <code>main.dart</code>:</p>
+          <pre><code>import 'package:google_mobile_ads/google_mobile_ads.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await MobileAds.instance.initialize();
+  runApp(MyApp());
+}</code></pre>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Removed Features -->
+        <section id="removed_features">
+          <h2>Removed Features</h2>
+          <p>The following features have been removed in version 1.1:</p>
+          
+          <h4>1. Booking System</h4>
+          <p>The previous booking system has been completely removed and replaced with the new TourPlan feature.</p>
+          
+          <h4>2. Stripe Payment Integration</h4>
+          <p>Stripe payment processing has been removed. The app now uses in-app purchases for premium subscriptions.</p>
+          
+          <h4>3. Deprecated APIs</h4>
+          <p>The following API endpoints have been removed:</p>
+          <ul>
+            <li><code>POST /api/bookings</code></li>
+            <li><code>GET /api/bookings</code></li>
+            <li><code>POST /api/payments/process</code></li>
+            <li><code>GET /api/payments/history</code></li>
+          </ul>
+        </section>
+
+        <hr class="divider">
+
+        <!-- User Discovery -->
+        <section id="user_discovery">
+          <h2>Enhanced User Discovery</h2>
+          <p>The user discovery system has been completely revamped with new filtering options and improved matching algorithms.</p>
+          
+          <h4>New Discovery Features</h4>
+          <ul>
+            <li><strong>Advanced Filters:</strong> Filter users by age, location, interests, and more</li>
+            <li><strong>Distance-Based Search:</strong> Find users within a specific radius</li>
+            <li><strong>Name Search:</strong> Search for users by name</li>
+            <li><strong>Smart Matching:</strong> Improved algorithm for better match suggestions</li>
+          </ul>
+
+          <h4>Implementation</h4>
+          <p>The new discovery system uses MongoDB's geospatial queries for location-based searches:</p>
+          <pre><code>// Example geospatial query
+User.find({
+  location: {
+    $near: {
+      $geometry: {
+        type: "Point",
+        coordinates: [longitude, latitude]
+      },
+      $maxDistance: distanceInMeters
+    }
+  },
+  age: { $gte: minAge, $lte: maxAge },
+  // Additional filters...
+        </section>
+
+        <hr class="divider">
+
+        <!-- UI/UX Updates -->
+        <section id="ui_updates">
+          <h2>🎨 UI/UX Improvements</h2>
+          <p>Version 1.1 comes with a fresh, modern design that's easier to use.</p>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="feature-box">
+                <h4>New Home Screen</h4>
+                <ul>
+                  <li>Swipeable profile cards</li>
+                  <li>Quick action buttons</li>
+                  <li>Simplified navigation</li>
+                </ul>
+              </div>
+              
+              <div class="feature-box">
+                <h4>Enhanced Profiles</h4>
+                <ul>
+                  <li>Larger profile photos</li>
+                  <li>Tabbed information</li>
+                  <li>Easy photo browsing</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="feature-box">
+                <h4>Dark Mode</h4>
+                <ul>
+                  <li>Automatic dark/light theme</li>
+                  <li>Manual theme selection</li>
+                  <li>Better readability</li>
+                </ul>
+              </div>
+              
+              <div class="feature-box">
+                <h4>Performance</h4>
+                <ul>
+                  <li>Faster loading</li>
+                  <li>Smoother animations</li>
+                  <li>Better battery life</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-success">
+            <i class="fas fa-check-circle"></i> All UI improvements are automatically included - no setup needed!
+          </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- SendGrid Integration -->
+        <section id="sendgrid_setup">
+          <h2>📧 Email Notifications with SendGrid</h2>
+          <p>Set up email notifications for user verification and updates.</p>
+          
+          <div class="step-card">
+            <div class="step-number">6</div>
+            <div class="step-content">
+              <h4>Set Up SendGrid</h4>
+              <ol>
+                <li>Go to <a href="https://signup.sendgrid.com/" target="_blank">SendGrid</a> and sign up</li>
+                <li>Verify your email address</li>
+                <li>Go to <strong>Settings</strong> > <strong>API Keys</strong> and create a new API key</li>
+                <li>Copy the API key (you'll only see it once!)</li>
+              </ol>
+              
+              <h5>Add These to Your .env File:</h5>
+              <pre>SENDGRID_API_KEY=your_api_key_here
+SENDGRID_FROM_EMAIL=your@email.com
+SENDGRID_FROM_NAME="MeetLove"</pre>
+              
+              <div class="alert alert-warning">
+                <i class="fas fa-exclamation-triangle"></i> Replace the values with your actual SendGrid API key and email.
+              </div>
+            </div>
+          </div>
+  const msg = {
+    to: email,
+    from: {
+      email: process.env.SENDGRID_FROM_EMAIL,
+      name: process.env.SENDGRID_FROM_NAME
+    },
+    subject: 'Verify Your Email',
+    text: `Your verification code is: ${otp}`,
+    html: `<p>Your verification code is: <strong>${otp}</strong></p>`
+  };
+
+  try {
+    await sgMail.send(msg);
+    console.log('Verification email sent');
+  } catch (error) {
+    console.error('Error sending email:', error);
+    throw error;
+  }
+};</code></pre>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Location Features -->
+        <section id="location_features">
+          <h2>📍 Location Features</h2>
+          <p>Enhanced location features for better user experience.</p>
+          
+          <div class="feature-box">
+            <h4>What's New:</h4>
+            <ul>
+              <li><strong>Smart Location Picker</strong> - Easy place selection on map</li>
+              <li><strong>Turn-by-Turn Navigation</strong> - Built-in directions to events</li>
+              <li><strong>Nearby Users</strong> - Find people in your area</li>
+              <li><strong>Distance Filters</strong> - Set how far to search</li>
+            </ul>
+            
+            <div class="alert alert-info">
+              <i class="fas fa-key"></i> <strong>Google Maps API Key Required</strong><br>
+              Get it from: <a href="https://cloud.google.com/maps-platform/" target="_blank">Google Cloud Console</a>
+            </div>
+            
+            <h5>Environment Variable to Set:</h5>
+            <pre>GOOGLE_MAPS_API_KEY=your_google_maps_api_key</pre>
+          </div>
+  
+  if (result.isOkay) {
+    return result;
+  } else {
+    throw Exception('Failed to get directions: ${result.errorMessage}');
+  }
+}</code></pre>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Conclusion -->
+        <section>
+          <h2>Conclusion</h2>
+          <p>MeetLove 1.1 brings significant improvements and new features to enhance the user experience and provide more value to your users. The new subscription model, TourPlan feature, and enhanced discovery system will help increase user engagement and retention.</p>
+          
+          <div class="alert alert-success">
+            <h5>Next Steps</h5>
+            <ol>
+              <li>Update your app with the latest codebase</li>
+              <li>Configure the new features as described in this document</li>
+              <li>Test all new functionality thoroughly</li>
+              <li>Update your app store listings with the new features</li>
+              <li>Plan your marketing strategy around the new features</li>
+            </ol>
+          </div>
+          
+          <p>If you have any questions or need assistance with the update, please don't hesitate to contact our support team.</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer id="footer" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p class="mb-0">© 2025 MeetLove. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
+  
+</div>
+<!-- Document Wrapper end -->
+
+<!-- JavaScript -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/highlight.js/highlight.pack.js"></script>
+<script src="assets/js/theme.js"></script>
+
+</body>
+</html>
